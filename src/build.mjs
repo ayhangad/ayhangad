@@ -19,7 +19,7 @@ const C = {
   intro: ['Ayhan Gad is a designer and engineer, currently at Tapforce.',
           'He makes software by deciding, mostly, what not to make.'],
   links: [['Website', 'https://ayhan.fyi'], ['X', 'https://x.com/ayhangad'],
-          ['LinkedIn', 'https://linkedin.com/in/ayhangad'], ['Book a call', 'https://cal.com/ayhangad']],
+          ['LinkedIn', 'https://linkedin.com/in/ayhangad']],
 };
 
 const THEMES = {
