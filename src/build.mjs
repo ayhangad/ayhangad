@@ -134,7 +134,9 @@ const readme = [
   pic('top', `alt="${C.name} — ${C.role}" width="100%" height="20" align="left"`),
   pic('main', `alt="${C.intro.join(' ')}" width="100%" height="420" align="left"`),
   `<img src="data:null;," width="100%" height="0" align="left" alt="">`,
-  ...C.links.map(([label, href], i) => `<a href="${href}">${pic(`link-${i}`, `alt="${label}" width="25%" height="20" align="left"`)}</a>`),
+  // Links: no align (GitHub pads img[align=left] by 20px, which breaks the 4×25% grid),
+  // and no whitespace between them so four 25% images fill exactly one line.
+  '<p>' + C.links.map(([label, href], i) => `<a href="${href}">${pic(`link-${i}`, `alt="${label}" width="25%" height="20"`)}</a>`).join('') + '</p>',
 ].join('\n');
 writeFileSync(ROOT + 'README.md', readme + '\n');
 
